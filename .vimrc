@@ -1,9 +1,8 @@
 " .vimrc
 "
 " To use this file, copy it to (or source it from)
-"       Unix:  ~/.vimrc
-"       Cygwin:  ~/.vim/wimrc
-"       Win32:  $VIM\_vimrc
+"       Unix:     ~/.vimrc
+"       Windows:  $env:USERPROFILE\.vimrc
 
 " When started as "evim", evim.vim will already have done these settings.
 if v:progname =~? "evim"
