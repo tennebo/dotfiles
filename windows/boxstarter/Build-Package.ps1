@@ -1,12 +1,21 @@
-#
-# Create a Chocolately package
-#
+<#
+.SYNOPSIS
+Create a Chocolately package.
+#>
+
 param(
     [Parameter(
         Mandatory=$true,
         HelpMessage="Which folder to build from?")]
     [Alias("folder")]
     $packageFolder)
+
+if (Test-Path variable:global:BoxStarter) {
+    Write-Verbose("Boxstarter: " + $Boxstarter.LocalRepo)
+} else {
+    Write-Host "Please Import-Module Boxstarter.Chocolatey"
+    exit 1
+}
 
 # Find the package name from the nuspec file
 $dir = Join-Path $PSScriptRoot $packageFolder
@@ -30,6 +39,14 @@ New-BoxstarterPackage `
 # This will build a Nuget package in the local Boxstarter repo
 Invoke-BoxstarterBuild -name $packageName
 
-# Push the package
-# TODO: We don't know the name of the nupkg file
-# cpush (Join-Path $Boxstarter.LocalRepo $packageName)
+# Push the package to one of:
+# o chocolatey.org
+# o myget.org
+# o nuget.org
+#
+# Note that we don't know the name of the generated nupkg file
+$localrepo = $Boxstarter.LocalRepo
+$remoterepo = "https://www.myget.org/F/boxstarter"
+Write-Host 'To publish:'
+Write-Host "cpush -source $remoterepo $localrepo\<package-name> "
+

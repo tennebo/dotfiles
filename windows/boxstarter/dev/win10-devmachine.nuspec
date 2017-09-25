@@ -1,13 +1,13 @@
 <?xml version="1.0"?>
 <package>
   <metadata>
-    <id>Win10.DevMachine</id>
+    <id>win10-devmachine</id>
     <title>Windows 10 Dev Machine</title>
     <version>0.1.0</version>
-    <authors>tennebo</authors>
+    <authors>Per Tennebø</authors>
     <owners>tennebo</owners>
-    <summary>Prepare a Windows 10 box to be used as a development machine</summary>
-    <description>Windows 10 development machine</description>
+    <summary>Windows 10 box to be used as a development machine</summary>
+    <description>Windows 10 box to be used as a development machine</description>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>boxstarter development</tags>
   </metadata>

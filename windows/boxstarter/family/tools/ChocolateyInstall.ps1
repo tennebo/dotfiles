@@ -6,18 +6,18 @@ $Boxstarter.NoPassword=$false
 $Boxstarter.AutoLogin=$true
 
 # Basic settings
-Disable-UAC
 Disable-InternetExplorerESC
 Disable-BingSearch
 
-# PowerShell
-Set-ExecutionPolicy RemoteSigned
-
-# OneGet package manager manager
-Get-PackageProvider -name chocolatey
-
 # Explorer settings
 Set-WindowsExplorerOptions -EnableShowHiddenFilesFoldersDrives -EnableShowFileExtensions -EnableShowFullPathInTitleBar
+
+# PowerShell (cannot use Set-ExecutionPolicy in the Chocolatey runner)
+Update-ExecutionPolicy RemoteSigned
+
+# OneGet package manager manager
+# Install-PackageProvider -Name Chocolatey
+# Install-PackageProvider -Name NuGet
 
 # Avoid having to confirm each install
 choco feature enable --name allowGlobalConfirmation

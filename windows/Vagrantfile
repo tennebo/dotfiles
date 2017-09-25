@@ -1,0 +1,37 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure(2) do |config|
+
+  config.vm.box = "mwrock/Windows2016"
+  config.vm.hostname = "win2016"
+  config.vm.provider "hyperv"
+  config.vm.communicator = "winrm"
+
+  config.vm.box_check_update = true
+
+  config.vm.synced_folder ".", "/vagrant",
+    type: "smb",
+    disabled: true,
+    smb_username: "ptennebo@numerix.com",
+    smb_password: ""
+
+  # Create a private network for host-only access to the VM on a specific IP.
+  #config.vm.network "private_network", type: "dhcp", bridge: "Wireless"
+  config.vm.network "private_network", type: "dhcp", bridge: "Wired Ethernet"
+
+  config.vm.provider "hyperv" do |h|
+    h.cpus = 2
+    h.maxmemory = "3072"
+    h.enable_virtualization_extensions = true
+    h.differencing_disk = true
+  end
+
+  # Provisioning: Install BoxStarter and Chocolatey 
+  config.vm.provision "shell",
+    inline: ". { iwr -useb http://boxstarter.org/bootstrapper.ps1 } | iex; get-boxstarter -Force"
+ 
+  # Provisioning: Execute the BoxStarter script
+  #config.vm.provision "file",  source: "boxstarter.txt", destination: "/tmp/boxstarter.txt"
+  #config.vm.provision "shell", inline: "Install-BoxStarterPackage -PackageName /tmp/boxstarter.txt"
+end

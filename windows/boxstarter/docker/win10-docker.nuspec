@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>win10-docker</id>
+    <title>Windows 10 Docker Host</title>
+    <version>0.1.0</version>
+    <authors>Per Tennebø</authors>
+    <owners>tennebo</owners>
+    <summary>Windows 10 box to be used as a Docker host</summary>
+    <description>Windows 10 box to be used as a Docker host</description>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>boxstarter docker windows</tags>
+  </metadata>
+</package>
