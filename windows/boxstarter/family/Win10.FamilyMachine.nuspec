@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package>
+  <metadata>
+    <id>Win10.FamilyMachine</id>
+    <title>Windows 10 Family Machine</title>
+    <version>0.1.0</version>
+    <authors>tennebo</authors>
+    <owners>tennebo</owners>
+    <summary>Prepare a Windows 10 box to be used as a kids' machine</summary>
+    <description>Windows 10 family machine</description>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <tags>boxstarter family kids</tags>
+  </metadata>
+</package>
