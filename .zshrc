@@ -38,12 +38,16 @@ else
     export EDITOR='vim'
 fi
 
-# ssh
-export SSH_KEY_PATH="~/.ssh/id_rsa"
-
-# CD path
-cdpath=(/mnt/c /mnt/c/Users/ptennebo /mnt/c/Users/ptennebo/github)
-
 # Fix broken directory colors
 LS_COLORS=${LS_COLORS}'di=0;36;40:ow=34;36;40:'
 export LS_COLORS
+
+# SSH keys
+export SSH_KEY_PATH="~/.ssh/id_rsa"
+
+# This assumes the Windows and Linux users are called the same
+winhome=/mnt/c/Users/$USER
+
+# CD path
+cdpath=(/mnt/c ${winhome} $HOME ${winhome}/OneDrive)
+
