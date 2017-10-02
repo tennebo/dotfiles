@@ -1,5 +1,8 @@
+<#
+.SYNOPSIS
+Configure Git to use P4Merge.
+#>
 
-# Configure Git to use P4Merge
 git config --global diff.tool p4merge
 git config --global merge.tool p4merge
 
