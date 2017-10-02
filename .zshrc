@@ -45,9 +45,17 @@ export LS_COLORS
 # SSH keys
 export SSH_KEY_PATH="~/.ssh/id_rsa"
 
+# Vagrant needs this to run under WSL
+export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
+
 # This assumes the Windows and Linux users are called the same
 winhome=/mnt/c/Users/$USER
 
 # CD path
-cdpath=(/mnt/c ${winhome} $HOME ${winhome}/OneDrive)
+cdpath=( \
+    $HOME \
+    /mnt/c \
+    ${winhome} \
+    ${winhome}/OneDrive \
+)
 
