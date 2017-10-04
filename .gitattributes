@@ -53,9 +53,10 @@ mvnw.bat           text eol=crlf
 # CrossAsset
 *.nxt     text
 
-# Binary image files
+# Binary files
+*.bgi     binary
 *.gif     binary
 *.ico     binary
-*.jpg     binary
 *.jpeg    binary
+*.jpg     binary
 *.png     binary
