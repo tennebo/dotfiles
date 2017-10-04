@@ -6,8 +6,8 @@
     <version>0.1.0</version>
     <authors>Per Tennebø</authors>
     <owners>tennebo</owners>
-    <summary>Windows 10 box to be used as a development machine</summary>
-    <description>Windows 10 box to be used as a development machine</description>
+    <summary>Prepare a Windows box to be used as a development machine</summary>
+    <description>Prepare a Windows box to be used as a development machine</description>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <tags>boxstarter development</tags>
   </metadata>
