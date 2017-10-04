@@ -40,6 +40,8 @@ mvnw.bat           text eol=crlf
 # Source code
 *.groovy  text diff=java
 *.java    text diff=java
+*.scala   text
+*.cs      text
 *.js      text
 *.ts      text
 *.tsx     text
