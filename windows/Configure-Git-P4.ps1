@@ -1,6 +1,6 @@
 <#
 .SYNOPSIS
-Configure Git to use P4Merge.
+Configure Git to use P4Merge for diff and merge.
 #>
 
 git config --global diff.tool p4merge
