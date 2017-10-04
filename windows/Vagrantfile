@@ -30,8 +30,13 @@ Vagrant.configure(2) do |config|
   config.vm.provision "shell", inline: <<-SHELL
     . { iwr -useb http://boxstarter.org/bootstrapper.ps1 } | iex
     Get-Boxstarter -Force
+
     Install-BoxstarterPackage -PackageName "win-no-annoy"
-    Install-BoxstarterPackage -PackageName "win-dev-vm"
+    Enable-PSRemoting -Force
+    Enable-RemoteDesktop
+
+    # This takes a long time
+    Install-WindowsUpdate -AcceptEula
   SHELL
   config.vm.provision "shell", path: "Disable-Shutdown-Reason.ps1"
 end
