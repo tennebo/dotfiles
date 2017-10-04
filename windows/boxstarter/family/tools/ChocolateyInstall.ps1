@@ -5,7 +5,6 @@ $Boxstarter.NoPassword=$false
 $Boxstarter.AutoLogin=$true
 
 # Chocolatey packages to install
-cinst Atom
 cinst git
 cinst notepad2
 cinst notepadplusplus
