@@ -6,8 +6,19 @@
 # For completeness, there are actually six(!) of these profiles:
 #   https://blogs.technet.microsoft.com/heyscriptingguy/2012/05/21/understanding-the-six-powershell-profiles/
 
-# Tab completion and colour-coding for Git
-Import-Module posh-git
+function Safe-Import-Module($modulename) {
+    if (Get-Module -ListAvailable -Name $modulename) {
+        Write-Verbose "Importing $modulename"
+        Import-Module $modulename
+    } else {
+        Write-Warning("$modulename not installed; try: Install-Module $modulename")
+        Write-Warning("The current profile file is " + $MyInvocation.ScriptName)
+    }
+}
+
+# Tab completion and colour-coding
+Safe-Import-Module "posh-git"
+Safe-Import-Module "posh-docker"
 
 # Allow using Control+D to exit the shell
 Set-PSReadlineOption -EditMode Emacs
