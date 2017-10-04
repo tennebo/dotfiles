@@ -32,7 +32,7 @@ mvnw.bat           text eol=crlf
 *.txt   text
 *.csv   text
 *.xml   text
-*.html  text
+*.html  text diff=html
 *.yml   text
 *.md    text
 *.json  text
@@ -41,7 +41,9 @@ mvnw.bat           text eol=crlf
 *.groovy  text diff=java
 *.java    text diff=java
 *.scala   text
-*.cs      text
+*.cs      text diff=csharp
+*.h       text diff=cpp
+*.cpp     text diff=cpp
 *.js      text
 *.ts      text
 *.tsx     text
