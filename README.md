@@ -20,16 +20,18 @@ More details here: <https://www.digitalocean.com/community/tutorials/how-to-upgr
 
 ## Installing Java on Ubuntu
 
-### Oracle
-
-    apt-add-repository ppa:webupd8team/java
-    apt-get install -y -q openjdk-8-jdk
-
 ### OpenJDK
 
     apt-add-repository ppa:openjdk-r/ppa
+    apt-get install -y -q openjdk-8-jdk
+
+### Oracle
+
+    apt-add-repository ppa:webupd8team/java
     apt-get install -y -q oracle-java8-installer
+    apt-get install -y -q oracle-java9-installer
     apt-get install -y -q oracle-java8-set-default
+    apt-get install -y -q oracle-java9-set-default
 
 ## Installing Node.js on Ubuntu
 
