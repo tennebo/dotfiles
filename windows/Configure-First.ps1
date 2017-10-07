@@ -12,8 +12,8 @@ Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
 # OneGet meta-package manager
 Write-Host "Installing Chocolatey and NuGet package providers..."
-Install-PackageProvider -Name Chocolatey
-Install-PackageProvider -Name NuGet
+Install-PackageProvider -Force -Name Chocolatey
+Install-PackageProvider -Force -Name NuGet
 
 # There is no package provider uninstall; this must be done manually:
 #
