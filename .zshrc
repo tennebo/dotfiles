@@ -31,6 +31,8 @@ source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
+umask 022
+
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
     export EDITOR='vim'
