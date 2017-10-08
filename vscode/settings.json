@@ -1,0 +1,15 @@
+{
+    "workbench.colorTheme": "One Dark Pro Vivid",
+    "editor.fontFamily": "'Meslo LG L DZ', 'DejaVu Sans Mono'",
+    "editor.renderWhitespace": "boundary",
+    "editor.fontSize": 12,
+
+    "files.insertFinalNewline": true,
+    "files.trimFinalNewlines": true,
+
+    // Don't send usage data and errors to Microsoft
+    "telemetry.enableTelemetry": false,
+  
+    // Don't send crash reports to Microsoft
+    "telemetry.enableCrashReporter": false
+}
