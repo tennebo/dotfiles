@@ -1,6 +1,9 @@
 <#
 .SYNOPSIS
-Install the PowerShell module for Git. Must be run as Administrator.
+Install the PowerShell module for Git.
+
+.DESCRIPTION
+Must be run as Administrator.
 #>
 
 [CmdletBinding()]

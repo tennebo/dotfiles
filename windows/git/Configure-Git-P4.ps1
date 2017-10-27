@@ -1,6 +1,9 @@
 <#
 .SYNOPSIS
 Configure Git to use P4Merge for diff and merge.
+
+.DESCRIPTION
+Must be run as Administrator.
 #>
 
 git config --global diff.tool p4merge

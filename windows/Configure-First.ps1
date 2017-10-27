@@ -1,10 +1,16 @@
 <#
 .SYNOPSIS
 Basic settings for all development/test boxes.
+
+.DESCRIPTION
+Must be run as Administrator.
 #>
 
+[CmdletBinding()]
+Param()
+
 # PowerShell
-Write-Host "Setting execution policy..."
+Write-Verbose "Setting execution policy..."
 Set-ExecutionPolicy -Force -Scope Process Unrestricted
 Set-ExecutionPolicy -Force -Scope LocalMachine Unrestricted
 
@@ -12,7 +18,7 @@ Set-ExecutionPolicy -Force -Scope LocalMachine Unrestricted
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
 
 # OneGet meta-package manager
-Write-Host "Installing Chocolatey and NuGet package providers..."
+Write-Verbose "Installing Chocolatey and NuGet package providers..."
 Install-PackageProvider -Force -Name Chocolatey
 Install-PackageProvider -Force -Name NuGet
 
@@ -21,4 +27,4 @@ Install-PackageProvider -Force -Name NuGet
 # $pp = Get-PackageProvider -Name Chocolatey
 # $pp.ProviderPath
 
-Write-Host "All done."
+Write-Verbose "All done."

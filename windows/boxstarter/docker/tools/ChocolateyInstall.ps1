@@ -19,7 +19,7 @@ Write-BoxstarterMessage 'Installing Docker'
 Install-Module -Name DockerMsftProvider -Repository PSGallery -Force
 Install-Package -Name docker -ProviderName DockerMsftProvider -Force
 
-Install-PackageProvider ContainerImage -Force
+Install-PackageProvider -Name ContainerImage -Force
 
 # PowerShell tab completion for Docker
 Write-BoxstarterMessage 'Installing posh-docker module'
