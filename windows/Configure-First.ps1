@@ -5,7 +5,8 @@ Basic settings for all development/test boxes.
 
 # PowerShell
 Write-Host "Setting execution policy..."
-Set-ExecutionPolicy Unrestricted
+Set-ExecutionPolicy -Force -Scope Process Unrestricted
+Set-ExecutionPolicy -Force -Scope LocalMachine Unrestricted
 
 # PowerShell module repository
 Set-PSRepository -Name PSGallery -InstallationPolicy Trusted
