@@ -39,6 +39,12 @@ More details here: <https://www.digitalocean.com/community/tutorials/how-to-upgr
     curl -sL https://deb.nodesource.com/setup_8.x | sudo -E bash -
     apt-get install nodejs
 
+## Installing Oh My Zsh
+
+https://github.com/robbyrussell/oh-my-zsh
+
+    sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+
 ## Installing VS Code Extensions
 
 To capture installed extensions:
