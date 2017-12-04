@@ -15,7 +15,7 @@ Set-ExecutionPolicy -Force -Scope Process Unrestricted
 
 # OneGet package manager manager
 Write-Verbose "Installing NuGet package provider..."
-Install-PackageProvider -Name NuGet
+Install-PackageProvider -Force -Name NuGet
 Import-PackageProvider NuGet
 Install-Module posh-git
 
