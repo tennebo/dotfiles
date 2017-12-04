@@ -2,4 +2,4 @@
 
 On Windows, place the file `settings.json` here:
 
-    $env:HOME\AppData\Roaming\Code\User\settings.json
+    $env:USERPROFILE\AppData\Roaming\Code\User\settings.json
