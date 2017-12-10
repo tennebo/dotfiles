@@ -34,7 +34,7 @@ set exrc                " enable reading rc files in current directory
 set noshortname         " don't use DOS 8.3 filenames
 set nobackup		" don't keep backup file
 set nowritebackup
-set fileformats=dos,unix
+set fileformats=unix,dos
 set history=1		" keep n lines of command line history
 set viminfo=
 
