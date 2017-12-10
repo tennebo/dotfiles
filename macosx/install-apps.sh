@@ -1,5 +1,7 @@
 #!/bin/sh
 
+brew update
+
 brew install wget
 
 brew cask install docker
