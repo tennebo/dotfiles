@@ -15,8 +15,8 @@ ENABLE_CORRECTION="true"
 
 COMPLETION_WAITING_DOTS="true"
 
-# Disable marking untracked files under VCS as dirty. This makes repository status
-# check for large repositories much faster.
+# Disable marking untracked files under VCS as dirty. This makes repository
+# status check for large repositories much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Command execution time stamp shown in the history command output.
@@ -27,7 +27,9 @@ HIST_STAMPS="yyyy-mm-dd"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
 
-source $ZSH/oh-my-zsh.sh
+if [[ -a $ZSH/oh-my-zsh.sh ]]; then
+    source $ZSH/oh-my-zsh.sh
+fi
 
 # User configuration
 
@@ -54,10 +56,8 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 winhome=/mnt/c/Users/$USER
 
 # CD path
-cdpath=( \
-    $HOME \
-    /mnt/c \
-    ${winhome} \
-    ${winhome}/OneDrive \
-)
+cdpath=($HOME $HOME/github)
+if [[ -a $winhome ]]; then
+    cdpath=($cdpath $winhome $winhome/Github)
+fi
 
