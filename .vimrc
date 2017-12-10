@@ -1,4 +1,5 @@
 " .vimrc
+"  
 "
 " To use this file, copy it to (or source it from)
 "       Unix:     ~/.vimrc
@@ -76,8 +77,7 @@ vnoremap p <Esc>:let current_reg = @"<CR>gvs<C-R>=current_reg<CR><Esc>
 if &t_Co > 2 || has("gui_running")
     syntax on
     set background=dark
-    " https://github.com/altercation/vim-colors-solarized
-    colorscheme solarized
+    colorscheme jellybeans
 endif
 
 " Only do this part when compiled with support for autocommands.
