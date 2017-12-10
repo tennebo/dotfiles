@@ -45,12 +45,3 @@ https://github.com/robbyrussell/oh-my-zsh
 
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 
-## Installing VS Code Extensions
-
-To capture installed extensions:
-
-    code --list-extensions
-
-To install new extensions:
-
-    code --install-extension ms-vscode.cpptools
