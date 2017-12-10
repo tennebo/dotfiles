@@ -8,6 +8,10 @@ else
     echo "Homebrew was already installed"
 fi
 
+echo "Installing Homebrew Services..."
+brew tap homebrew/services
+echo "Installed Homebrew Services."
+
 echo "Installing Cask..."
 brew tap caskroom/cask
 echo "Installed Cask."
