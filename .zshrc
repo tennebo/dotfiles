@@ -11,7 +11,7 @@ ZSH_THEME="robbyrussell"
 
 export UPDATE_ZSH_DAYS=17
 
-ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="false"
 
 COMPLETION_WAITING_DOTS="true"
 
@@ -31,9 +31,12 @@ if [[ -a $ZSH/oh-my-zsh.sh ]]; then
     source $ZSH/oh-my-zsh.sh
 fi
 
+#
 # User configuration
+#
 
 umask 022
+unsetopt correct_all
 
 # Preferred editor for local and remote sessions
 if [[ -n $SSH_CONNECTION ]]; then
@@ -54,10 +57,22 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
 # This assumes the Windows and Linux users are called the same
 winhome=/mnt/c/Users/$USER
+wintmp=${winhome}/AppData/Local/Temp
 
 # CD path
-cdpath=($HOME $HOME/github)
-if [[ -a $winhome ]]; then
-    cdpath=($cdpath $winhome $winhome/Github)
+cdpath=($HOME)
+if [[ -a /mnt/c ]]; then
+    cdpath=($cdpath /mnt/c/nxsrc $winhome/Github)
+    cdpath=($cdpath /mnt/c $winhome)
+    cdpath=($cdpath $winhome/OneDrive)
+    cdpath=($cdpath $winhome/OneDrive\ -\ NUMERIX)
 fi
+
+if [[ -a $wintmp ]]; then
+    # Used by Git for merge and diff operations
+    export TMPDIR=$wintmp
+fi
+
+# CrossAsset Linux license
+export NX_LICENSE_DIR=$HOME/license
 
