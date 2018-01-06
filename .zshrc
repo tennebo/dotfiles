@@ -25,7 +25,7 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # Which plugins to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(aws, docker, gitfast, gradle)
 
 if [[ -a $ZSH/oh-my-zsh.sh ]]; then
     source $ZSH/oh-my-zsh.sh
