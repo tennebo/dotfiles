@@ -2,7 +2,7 @@
 	tool = p4merge
 [difftool "p4merge"]
 	path = /mnt/c/Program Files/Perforce/p4merge.exe
-    cmd = /mnt/c/Program\\ Files/Perforce/p4merge.exe \"`echo $LOCAL | sed 's_/mnt/c_C:_'`\" \"`echo $REMOTE | sed 's_/mnt/c_C:_'`\"
+	cmd = /mnt/c/Program\\ Files/Perforce/p4merge.exe \"`echo $LOCAL | sed 's_/mnt/c_C:_'`\" \"`echo $REMOTE | sed 's_/mnt/c_C:_'`\"
 
 [difftool]
 	prompt = false
