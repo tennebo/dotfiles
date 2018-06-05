@@ -15,3 +15,10 @@
 	pager = less -FRX
 [color]
 	ui = true
+[diff]
+	tool = p4merge
+[difftool "p4merge"]
+	path = <path to p4merge>
+	cmd = p4merge $LOCAL $REMOTE
+[difftool]
+	prompt = false
