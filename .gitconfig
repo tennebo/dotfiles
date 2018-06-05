@@ -12,5 +12,6 @@
 	autocrlf = false
 	safecrlf = warn
 	whitespace = trailing-space,space-before-tab
+	pager = less -FRX
 [color]
 	ui = true
