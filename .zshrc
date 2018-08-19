@@ -59,6 +59,9 @@ export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 winhome=/mnt/c/Users/$USER
 wintmp=${winhome}/AppData/Local/Temp
 
+# SQL Server tools
+path=($path /opt/mssql-tools/bin)
+
 # CD path
 cdpath=($HOME)
 if [[ -a /mnt/c ]]; then
