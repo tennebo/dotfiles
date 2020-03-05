@@ -12,8 +12,6 @@ apt-get install -y libffi-dev
 apt-get install -y python-dev
 
 # Python packages
-pip3 install flask
-pip3 install flask_jsonpify
 pip3 install numpy
 pip3 install pandas
 
