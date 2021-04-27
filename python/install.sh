@@ -1,18 +1,14 @@
 #!/bin/sh
 
-# Install and upgrade pip and pip-review
-apt-get install -y python3-pip
-pip3 install --upgrade pip
-pip3 install pip-review
+# Notes:
+# 1. Don't use pip to upgrade itself
+# 2. Don't run pip as sudo
 
-# Install Python-related packages
-apt-get install -y build-essential
-apt-get install -y libssl-dev
-apt-get install -y libffi-dev
-apt-get install -y python-dev
+# Python & friends (python3 is already installed on Ubuntu 20.04)
+sudo apt install -y python3-pip
+sudo apt install -y python3-venv
+sudo apt install -y python3-dev
 
-# Python packages
-pip3 install numpy
-pip3 install pandas
-pip3 install pipenv
+# Python-related dev packages
+sudo apt install -y build-essential libssl-dev libffi-dev
 
