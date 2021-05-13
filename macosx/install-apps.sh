@@ -9,17 +9,21 @@ brew update
 
 brew install openssl
 brew install python
+brew install pyenv
 brew install wget
+brew install java
+brew install clojure/tools/clojure
+# brew cask install docker
 
-brew cask install docker
-brew cask install java
-brew cask install postman
-brew cask install spotify
+# AWS
+brew tap aws/tap
+brew tap weaveworks/tap
+brew install aws-sam-cli
+brew install weaveworks/tap/eksctl
+
 
 # From App Store:
 # google-chrome
-# skype
-# slack
 # whatsapp
 
 brew cleanup
