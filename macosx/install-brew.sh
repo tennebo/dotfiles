@@ -2,7 +2,7 @@
 
 if [ ! -x /usr/local/bin/brew ]; then
     echo "Installing Homebrew..."
-    /usr/bin/env ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"
     echo "Installed Homebrew."
 else
     echo "Homebrew was already installed"
@@ -13,7 +13,8 @@ brew tap homebrew/services
 echo "Installed Homebrew Services."
 
 echo "Installing Cask..."
-brew tap caskroom/cask
+brew tap homebrew/cask
+brew tap homebrew/cask-versions
 echo "Installed Cask."
 
 echo "Upgrading brew apps..."
