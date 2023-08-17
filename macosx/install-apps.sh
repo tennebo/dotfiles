@@ -12,13 +12,12 @@ brew install python
 brew install pyenv
 brew install wget
 brew install java
-brew install clojure/tools/clojure
 # brew cask install docker
 
+brew install --cask multipass
+
 # AWS
-brew tap aws/tap
 brew tap weaveworks/tap
-brew install aws-sam-cli
 brew install weaveworks/tap/eksctl
 
 
@@ -28,3 +27,5 @@ brew install weaveworks/tap/eksctl
 
 brew cleanup
 
+brew tap-info --installed
+brew list --full-name
