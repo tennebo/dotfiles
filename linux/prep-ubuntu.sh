@@ -17,6 +17,9 @@ sudo apt install -y python3.11
 sudo update-alternatives --install /usr/bin/python3 python /usr/bin/python3.11 1
 sudo update-alternatives --install /usr/bin/python3 python /usr/bin/python3.10 2
 
+# Kubernetes
+sudo snap install kubectl --classic
+
 # Node.js
 curl -sL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt install -y nodejs
