@@ -25,25 +25,17 @@ HIST_STAMPS="yyyy-mm-dd"
 
 # Which plugins to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws, docker, gitfast, gradle)
+plugins=(aws docker gitfast)
 
 if [[ -a $ZSH/oh-my-zsh.sh ]]; then
     source $ZSH/oh-my-zsh.sh
 fi
 
-#
-# User configuration
-#
-
 umask 022
 unsetopt correct_all
 
 # Preferred editor for local and remote sessions
-if [[ -n $SSH_CONNECTION ]]; then
-    export EDITOR='vim'
-else
-    export EDITOR='vim'
-fi
+export EDITOR='vim'
 
 # Fix broken directory colors
 LS_COLORS=${LS_COLORS}'di=0;36;40:ow=34;36;40:'
@@ -51,9 +43,6 @@ export LS_COLORS
 
 # SSH keys
 export SSH_KEY_PATH="~/.ssh/id_rsa"
-
-# Vagrant needs this to run under WSL
-export VAGRANT_WSL_ENABLE_WINDOWS_ACCESS="1"
 
 # This assumes the Windows and Linux users are called the same
 winhome=/mnt/c/Users/$USER
@@ -76,6 +65,11 @@ if [[ -a $wintmp ]]; then
     export TMPDIR=$wintmp
 fi
 
-# CrossAsset Linux license
-export NX_LICENSE_DIR=$HOME/license
+# Kubernetes
+[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+
+# AWS
+AWS_REGION=us-east-1
+autoload bashcompinit && bashcompinit
+[[ /usr/local/bin/aws_completer ]] && complete -C '/usr/local/bin/aws_completer' aws
 
