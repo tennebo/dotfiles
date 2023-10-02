@@ -11,6 +11,9 @@ sudo apt install -y openjdk-17-jre-headless
 # Maven
 sudo apt install -y maven
 
+# Zsh
+sudo apt install -y zsh
+
 # Python
 # sudo add-apt-repository ppa:deadsnakes/ppa
 sudo apt install -y python3.11
