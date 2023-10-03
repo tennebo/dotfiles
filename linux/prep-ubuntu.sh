@@ -3,7 +3,7 @@
 sudo apt update && sudo apt upgrade -y
 
 # Dev tools
-sudo apt install -y build-essential wget zip unzip
+sudo apt install -y build-essential wget zip unzip jq
 
 # Java
 sudo apt install -y openjdk-17-jre-headless
