@@ -70,6 +70,7 @@ fi
 
 # AWS
 AWS_REGION=us-east-1
+AWS_DEFAULT_REGION=us-east-1
 autoload bashcompinit && bashcompinit
 [[ /usr/local/bin/aws_completer ]] && complete -C '/usr/local/bin/aws_completer' aws
 
