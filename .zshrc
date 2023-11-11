@@ -66,7 +66,7 @@ if [[ -a $wintmp ]]; then
 fi
 
 # Kubernetes
-[[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
+[[ kubectl ]] && source <(kubectl completion zsh)
 
 # AWS
 export AWS_REGION=us-east-1
