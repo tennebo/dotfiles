@@ -69,8 +69,9 @@ fi
 [[ /usr/local/bin/kubectl ]] && source <(kubectl completion zsh)
 
 # AWS
-AWS_REGION=us-east-1
-AWS_DEFAULT_REGION=us-east-1
+export AWS_REGION=us-east-1
+export AWS_DEFAULT_REGION=us-east-1
+export SAM_CLI_TELEMETRY=0
 autoload bashcompinit && bashcompinit
 [[ /usr/local/bin/aws_completer ]] && complete -C '/usr/local/bin/aws_completer' aws
 
