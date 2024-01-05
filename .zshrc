@@ -60,6 +60,9 @@ if [[ -a /mnt/c ]]; then
     cdpath=($cdpath $winhome/OneDrive\ -\ NUMERIX)
 fi
 
+# WSL with VPN hack
+# Get-NetAdapter | Where-Object {$_.InterfaceDescription -Match "Cisco AnyConnect"} | Set-NetIPInterface -InterfaceMetric 6000
+
 if [[ -a $wintmp ]]; then
     # Used by Git for merge and diff operations
     export TMPDIR=$wintmp
