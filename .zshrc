@@ -57,7 +57,7 @@ if [[ -a /mnt/c ]]; then
     cdpath=($cdpath /mnt/c/nxsrc $winhome/Github)
     cdpath=($cdpath /mnt/c $winhome)
     cdpath=($cdpath $winhome/OneDrive)
-    cdpath=($cdpath $winhome/OneDrive\ -\ NUMERIX)
+    cdpath=($cdpath "$winhome/OneDrive - Numerix LLC")
 fi
 
 # WSL with VPN hack
